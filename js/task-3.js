@@ -4,11 +4,11 @@ const output = document.querySelector("#name-output");
 const handler = () => {
     output.textContent = input.value.trim() || "Anonymous";
 }
-input.addEventListener("input", handler)
+input.addEventListener("input", handler);
 
 
-// Інший спосіб
+// Інший спосіб для вирішення задачі
 // const handler = (event) => {
 //     output.textContent = event.currentTarget.value.trim() || "Anonymous";
 // }
-// input.addEventListener("input", handler)
+// input.addEventListener("input", handler);

@@ -11,14 +11,17 @@ function onCreateBoxes(amount) {
   amount = Number(input.value);
   
   if (amount >= 1 && amount <= 100) {
+    let size = 30;
+    let markup = '';
     for (let i = 0; i < amount; i++) {
-      const box = document.createElement('div');
-      box.style.width = `${30 + i * 10}px`;
-      box.style.height = `${30 + i * 10}px`;
-      box.style.backgroundColor = getRandomHexColor();
-      boxes.append(box);
+      const boxMarkup = `<div style = "background-color: ${getRandomHexColor()}; 
+                        width: ${size}px; 
+                        height: ${size}px">
+                        </div>`
+      markup += boxMarkup;
+      size += 10;
     }
-    
+    boxes.innerHTML = markup;
     input.value = '';
   } else {
     alert('Please, enter a number between 1 and 100');
